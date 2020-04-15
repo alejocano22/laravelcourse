@@ -15,16 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', 'HomeController@index')->name("home.index");
 Route::get('/info', 'HomeController@info')->name("home.info");
-Route::get('/product/show/{id}', 'ProductController@show')->name("product.show");
-Route::get('/product/create', 'ProductController@create')->name("product.create");
-Route::post('/product/save', 'ProductController@save')->name("product.save");
+Route::get('/product/show/{id}', 'ProductController@show')->name("product.show")->middleware('auth');
+Route::get('/product/create', 'ProductController@create')->name("product.create")->middleware('auth');
+Route::post('/product/save', 'ProductController@save')->name("product.save")->middleware('auth');
 
-Route::get('/product/successful', 'ProductController@successful')->name("product.successful");
+Route::get('/product/successful', 'ProductController@successful')->name("product.successful")->middleware('auth');
 
-Route::get('/image/index', 'ImageController@index')->name("image.index");
-Route::post('/image/save', 'ImageController@save')->name("image.save");
+Route::get('/image/index', 'ImageController@index')->name("image.index")->middleware('auth');
+Route::post('/image/save', 'ImageController@save')->name("image.save")->middleware('auth');
 
-Route::get('/image-not-di/index', 'ImageNotDIController@index')->name("imagenotdi.index");
-Route::post('/image-not-di/save', 'ImageNotDIController@save')->name("imagenotdi.save");
+Route::get('/image-not-di/index', 'ImageNotDIController@index')->name("imagenotdi.index")->middleware('auth');
+Route::post('/image-not-di/save', 'ImageNotDIController@save')->name("imagenotdi.save")->middleware('auth');
+
+Auth::routes(['register' => false, 'reset' => false]);
+
+Route::get('/home', 'HomeController@index')->name('home');
