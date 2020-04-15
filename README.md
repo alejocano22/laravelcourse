@@ -1,7 +1,9 @@
 # Simple Application in Laravel
-Alejandro Cano Múnera </br>
-Universidad EAFIT
-
+## Alejandro Cano Múnera </br>
+### Universidad EAFIT
+</br>
+</br>
+</br>
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
