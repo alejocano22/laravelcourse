@@ -13,7 +13,7 @@
   <style>
   html, body {
     background-image: url('https://www.elsetge.cat/myimg/f/121-1212743_4k-hd-wallpaper-smoke-black-background-high-resolution.jpg');
-    background-color: #ffffff;
+    background-size: cover;
     color: #636b6f;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
@@ -43,15 +43,16 @@
 
   .content {
     text-align: center;
+    height: 60vh;
   }
 
   .title {
-    font-size: 84px;
+    font-size: 8vw;
   }
 
   .links > a {
     color: #636b6f;
-    padding: 0 25px;
+    padding: 0 20px;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: .1rem;
@@ -59,9 +60,16 @@
     text-transform: uppercase;
   }
 
-  .m-b-md {
-    margin-bottom: 30px;
+  .links2 > a {
+    color: #636b6f;
+    padding: 0 20px;
+    font-size: 2vw;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
   }
+
   </style>
 </head>
 <body>
@@ -72,7 +80,6 @@
       <a href="{{ url('/home') }}">Home</a>
       @else
       <a href="{{ route('login') }}">Login</a>
-
       @if (Route::has('register'))
       <a href="{{ route('register') }}">Register</a>
       @endif
@@ -80,11 +87,11 @@
     </div>
     @endif
 
-    <div class="content">
+    <div class="content ">
       <div class="title m-b-md">
-        CANOMAGIC
+        ALEJOCANO22
       </div>
-      <div class="links">
+      <div class="links2">
         <a href="https://www.instagram.com/alejocano22">Instagram</a>
         <a href="https://github.com/alejocano22">Github</a>
         <a href="https://www.linkedin.com/in/alejocano22">Linkedin</a>
