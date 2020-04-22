@@ -29,6 +29,8 @@ RUN apt-get upgrade -y \
     && apt-get install -y nodejs \
     && npm install -g react-tools 
 
+RUN php artisan config:clear
+RUN php artisan cache:clear
 RUN php artisan key:generate
 RUN php artisan migrate
 RUN chmod -R 777 storage
