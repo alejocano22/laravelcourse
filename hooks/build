@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker build -t laravel-docker --build-arg APP_KEY=$APP_KEY --build-arg DB_HOST=$DB_HOST --build-arg DB_DATABASE=$DB_DATABASE --build-arg DB_USERNAME=$DB_USERNAME --build-arg DB_PASSWORD=$DB_PASSWORD . 

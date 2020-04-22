@@ -1,3 +1,14 @@
+ARG APP_KEY
+ENV APP_KEY $APP_KEY
+ARG DB_HOST
+ENV DB_HOST $DB_HOST
+ARG DB_DATABASE
+ENV DB_DATABASE $DB_DATABASE
+ARG DB_USERNAME
+ENV DB_USERNAME $DB_USERNAME
+ARG DB_PASSWORD
+ENV DB_PASSWORD $DB_PASSWORD
+
 FROM php:7.2-apache-stretch
 RUN apt-get update -y && apt-get install -y openssl zip unzip git 
 RUN docker-php-ext-install pdo_mysql
