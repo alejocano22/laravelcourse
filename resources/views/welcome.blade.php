@@ -89,7 +89,7 @@
 
     <div class="content ">
       <div class="title m-b-md">
-        ALEJOCANO22
+        acanom
       </div>
       <div class="links2">
         <a href="https://www.instagram.com/alejocano22">Instagram</a>
